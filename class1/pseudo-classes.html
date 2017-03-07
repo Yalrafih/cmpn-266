@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pseudo Classes</title>
+	<style>
+		a:link { color: blue } /* unvisited links */
+		a:visited { color: purple } /* visited links */
+		a:hover { font-weight: bold } /* user hovers */
+		a:active { color: lime } /* active links */
+
+		.input:focus {
+			border: solid red 5px;
+		}
+		.input:checked {
+  			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<a href="#">Link Text</a>
+	<br><br>
+	<input type="text" size="22" class="input">
+	<br><br>
+	<input type="checkbox" class="input">
+</body>
+</html>

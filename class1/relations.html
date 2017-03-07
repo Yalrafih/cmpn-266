@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Relations</title>
+	<style>
+		span { background-color: #FFF; }
+		img + span.caption {
+		  background-color: DodgerBlue;
+		}
+
+		#combinator ~ em {
+		  background-color: DodgerBlue;
+		}
+
+		#directchildren > span {
+		  background-color: DodgerBlue;
+		}
+
+		#descendant span { 
+			background-color: DodgerBlue;
+		}
+	</style>
+</head>
+<body>
+	<b>Adjacent sibling selectors A + B</b>
+	<br>
+	<img src="./img/header.png"></img><span class="caption">The first photo</span>
+
+
+	<br><br>
+	<b>General sibling selectors A ~ B</b>
+	<br>
+	<em>Not a General sibling em</em>
+	<div id="combinator">Here is a paragraph.</div>
+	<em>General sibling em.</em>
+	<br>
+	<em>General sibling em.</em>
+
+
+	<br><br>
+	<b>Child selectors A > B</b>
+	<br>
+	<div id="directchildren">
+		<span>Span 1. Direct child.
+			<span>Span 2. In the span that's in the div.</span>
+		</span>
+		<span>Span 3. Direct child</span>
+	</div>
+	<span>Span 4. Not in a div at all</span>
+
+
+	<br><br>
+	<b>Descendant selectors A B</b>
+	<br>
+	<div id="descendant">
+	  <span>Span 1.
+	    <span>Span 2.</span>
+	  </span>
+	</div>
+	<span>Span 3.</span>
+</body>
+</html>

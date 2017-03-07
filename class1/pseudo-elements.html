@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pseudo Elements</title>
+	<style>
+		/* IE8 supports the content property only if a !DOCTYPE is specified.*/
+		span.content-img:before {
+			content: url('./img/beforeafter.png');
+		}
+		span.content-img:after {
+			content: url('./img/beforeafter.png');
+		}
+
+		span.content-txt:before {
+			content: '"';
+			color: red;
+		}
+		span.content-txt:after {
+			content: '"';
+			color: red;
+		}
+
+		div#container p:first-of-type {
+		    color: #ff0000;
+		}
+
+		p {
+		    width: 500px;
+		}
+
+		p#line::first-line {
+		    color: #ff0000;
+		}
+
+		p#letter::first-letter {
+		    color: #ff0000;
+		}
+	</style>
+</head>
+<body>
+	<h1>:before , :after</h1>
+	<span class="content-img">content-img</span>
+	<br><br>
+	<span class="content-txt">content-txt</span>
+
+	<h1>:first-of-type</h1>
+	<div>The :first-of-type CSS pseudo-class represents the first sibling of its type in the list of children of its parent element.</div>
+	<div id="container">
+		<p>The first paragraph.</p>
+		<p>The second paragraph.</p>
+		<p>The third paragraph.</p>
+		<p>The fourth paragraph.</p>
+	</div>
+
+	<h1>:first-line</h1>
+	<p id="line">
+		The ::first-line CSS pseudo-element applies styles only to the first line of an element. The amount of the text on the first line depends of numerous factors, like the width of the elements or of the document, but also of the font size of the text. As all pseudo-elements, the selectors containing ::first-line does not match any real HTML element.
+		<br>
+		A first line has only meaning in a block-container box, therefore the ::first-line pseudo-element has only an effect on elements with a display value first-of-type block, inline-block, table-cell or table-caption. In all other cases, ::first-line has no effect.
+	</p>
+
+
+	<h1>:first-letter</h1>
+	<p id="letter">
+		The ::first-letter CSS pseudo-element selects the first letter of the first line of a block, if it is not preceded by any other content (such as images or inline tables) on its line.
+		<br><br>
+		The first letter of an element is not necessarily trivial to identify:
+		Punctuation, that is any characters defined in Unicode in the open (Ps), close (Pe), initial quote (Pi), final quote (Pf) and other punctuation (Po) classes, preceding or immediately following the first letter is also matched by this pseudo-element.
+		<br><br>
+		Similarly some languages have digraphs that are always capitalized together, like the IJin Dutch. In these rare cases, both letters of the digraph should be matched by the::first-letter pseudo-element. (This is poorly supported by browsers, check thebrowser compatibility table).
+		<br><br>
+		Finally, a combination of the ::before pseudo-element and the content property may inject some text at the beginning of the element. In that case, ::first-letter will match the first letter of this generated content.
+		<br><br>
+		A first line has only meaning in a block-container box, therefore the ::first-letter pseudo-element has only an effect on elements with a display value of block, inline-block, table-cell, list-item or table-caption. In all other cases, ::first-letter has no effect.
+	</p>
+</body>
+</html>
