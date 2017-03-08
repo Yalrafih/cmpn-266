@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Relations</title>
 	<style>
-		span { background-color: #FFF; }
-		img + span.caption {
-		  background-color: DodgerBlue;
+		span {
+			background-color: #FFF;
 		}
 
-		#combinator ~ em {
-		  background-color: DodgerBlue;
+		img+span {
+			background-color: DodgerBlue;
 		}
 
-		#directchildren > span {
-		  background-color: DodgerBlue;
+		#combinator~em {
+			background-color: DodgerBlue;
 		}
 
-		#descendant span { 
+		#directchildren>span {
+			background-color: DodgerBlue;
+		}
+
+		#descendant span {
 			background-color: DodgerBlue;
 		}
 	</style>
 </head>
+
 <body>
 	<b>Adjacent sibling selectors A + B</b>
 	<br>
-	<img src="./img/header.png"></img><span class="caption">The first photo</span>
+	<img src="./img/header.png"></img><span>The first photo</span>
 
 
 	<br><br>
@@ -53,10 +58,11 @@
 	<b>Descendant selectors A B</b>
 	<br>
 	<div id="descendant">
-	  <span>Span 1.
+		<span>Span 1.
 	    <span>Span 2.</span>
-	  </span>
+		</span>
 	</div>
 	<span>Span 3.</span>
 </body>
+
 </html>

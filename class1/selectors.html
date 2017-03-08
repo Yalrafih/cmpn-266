@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Selectors</title>
 	<style>
-		* {color: #000;}
-		h1 {color: red;}
-		.class-selector {color: blue;}
-		#id-selector {color: green;}
+		* {
+			color: #000;
+		}
 
+		h1 {
+			color: red;
+		}
+
+		.class-selector {
+			color: blue;
+		}
+
+		#id-selector {
+			color: green;
+		}
 		/* All spans with a "lang" attribute are bold */
-		span[lang] {font-weight:bold;}
 
+		span[lang] {
+			font-weight: bold;
+		}
 		/* All spans in Portuguese are green */
-		span[lang="pt"] {color:green;}
 
-		/* Represents an element with an attribute name of attr whose value is a whitespace-separated list of words, 
+		span[lang="pt"] {
+			color: green;
+		}
+		/* Represents an element with an attribute name of attr whose value is a whitespace-separated list of words,
 		one of which is exactly "value".
 
 		All spans that have the word flower in their title.
 		*/
-		span[title~="flower"] {color: blue;}
 
-		/* 
+		span[title~="flower"] {
+			color: blue;
+		}
+		/*
 		Represents an element with an attribute name of attr. Its value can be exactly “value” or can begin with “value” immediately followed by “-”. It can be used for language subcode matches.
 
-		Any span that has an attribute that starts with "zh" is red, matches simplified (zh-CN) or traditional (zh-TW) 
+		Any span that has an attribute that starts with "zh" is red, matches simplified (zh-CN) or traditional (zh-TW)
 		*/
-		span[lang|="zh"] {color: red;}
-		
-		/* 
+
+		span[lang|="zh"] {
+			color: red;
+		}
+		/*
 		Represents an element with an attribute name of attr and whose value is prefixed by "value".
 
-		All internal links have a gold background 
+		All internal links have a gold background
 		*/
-		a[href^="#"] {background-color:gold}
 
-		/* 
+		a[href^="#"] {
+			background-color: gold
+		}
+		/*
 		Represents an element with an attribute name of attr and whose value is suffixed by "value".
 
-		All links to urls ending in ".cn" are red 
+		All links to urls ending in ".cn" are red
 		*/
-		a[href$=".cn"] {color: red;}
 
-		/* 
+		a[href$=".cn"] {
+			color: red;
+		}
+		/*
 		Represents an element with an attribute name of attr and whose value contains at least one occurrence of string "value" as substring.
 
 		All links to with "example" in the url have a grey background */
-		a[href*="example"] {background-color: #CCCCCC;}
+
+		a[href*="example"] {
+			background-color: #CCCCCC;
+		}
 	</style>
 </head>
+
 <body>
 	Body content(Universal selector)
 	<h2>Universal selector</h2>
@@ -56,7 +83,7 @@
 
 	<h1>Element name (tag) selector 1</h1>
 	<h1>Element name (tag) selector 1</h1>
-	
+
 	<p class="class-selector">class-selector 1</p>
 	<p class="class-selector">class-selector 2</p>
 	<div class="class-selector">class-selector 3</div>
@@ -71,4 +98,5 @@
 	<span lang="zh-CN">zh-CN span</span>
 	<span lang="zh-TW">TW-CN span</span>
 </body>
+
 </html>
