@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Fonts Example</title>
+	
+	<style type="text/css">
+	.serif { font-family: serif; }
+	.sans-serif { font-family: sans-serif; }
+	.monospace { font-family: monospace; }
+	.cursive { font-family: cursive; }
+	.fantasy { font-family: fantasy; }
+	
+	/*
+	In a font stack, order counts; preference given to the left most 
+	font. If that font is not installed on a user's system, then 
+	the next font in the list is loaded if possible. Notice the quotes 
+	around fonts with spaces in the name, this is necessary. serif ends 
+	off the list as it is the most generic.
+	*/
+	.fontstack { font-family: Georgia, 'Times New Roman', serif; }
+	
+	/*
+	Below is a web font example.
+	
+	Most browsers support these following fonts. The WOFF (Web Open Font Format) 
+	is the most compatible, but in general TTF/OTF, EOT (embedded open type, IE) 
+	and SVG can be used (SVG type fonts are the least supported).
+	
+	Be careful when selecting such fonts as some are under 
+	licensing agreements that require you to pay for some.
+	The one below is under a license permitting "free" use.
+	The AlexBrush font was from http://www.fontsquirrel.com/
+	*/
+	@font-face {
+		font-family: AlexBrush;
+		src: url('AlexBrush-Regular.ttf');
+		/*
+		If a font also comes in other formats then they can be placed here also.
+		The browser will select the one it prefers.
+		*/
+	}
+	.webfont { 
+		font-family: AlexBrush;
+		font-size: 3em;
+	}
+	
+	/* The italic style uses a font's italic version. */
+	.italic {
+		font-style: italic;
+	}
+	
+	/* The oblique style is just slanted text, not the font's italic version. */
+	.oblique {
+		font-style: oblique;
+	}
+	
+	.variant {
+		font-variant: small-caps;
+		font-weight: bold;
+		font-size: 100%;
+	}
+	</style>
+</head>
+
+<body>
+	<p class="serif">Some serif text as an example.</p>
+	
+	<p class="sans-serif">Some sans-serif text as an example.</p>
+	
+	<p class="monospace">Some monospace text as an example.</p>
+	
+	<p class="cursive">Some cursive text as an example.</p>
+	
+	<p class="fantasy">Some fantasy text as an example.</p>
+	
+	<p class="fontstack">Some font stack text as an example.</p>
+	
+	<p class="webfont">Some web font text as an example.</p>
+	
+	<p class="italic">Some text in italic.</p>
+	
+	<p class="oblique">Some text in oblique</p>
+	
+	<p class="variant">Some small caps in bold and a larger font size.</p>
+	
+	
+</body>
+</html>

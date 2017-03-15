@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+	<title>Opacity</title>
+
+	<style type="text/css">
+	div { background-color: pink; }
+	.light {
+		opacity: 0.2; /* Barely see the text over the background */
+		filter: alpha(opacity=20); /* IE8 and lower */
+	}
+	.medium {
+		opacity: 0.5; /* See the text more clearly over the background */
+		filter: alpha(opacity=50); /* IE8 and lower */
+	}
+	.heavy {
+		opacity: 0.9; /* See the text very clearly over the background */
+		filter: alpha(opacity=90); /* IE8 and lower */
+	}
+	</style>
+</head>
+<body>
+	<div class="light">You can barely see this.</div>
+	<div class="medium">This is easier to see.</div>
+	<div class="heavy">This is very easy to see.</div>
+</body>
+</html>
